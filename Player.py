@@ -5,7 +5,7 @@ class Player(pygame.sprite.Sprite):
         pygame.sprite.Sprite.__init__(self, self.containers)
         
         self.image = pygame.image.load("Player/cursor.png")
-        self.image = pygame.transform.scale(self.image, [25,25])
+        self.image = pygame.transform.scale(self.image, [90,120])
         self.rect = self.image.get_rect(topleft = pos)
         
     def update(*args):
