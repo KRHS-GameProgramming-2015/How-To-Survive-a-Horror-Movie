@@ -31,8 +31,16 @@ while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT: 
             sys.exit()
+        elif event.type == pygame.MOUSEMOTION:
+            player.move(event.pos)
+        elif event.type == pygame.MOUSEBUTTONUP:
+            player.unclick()
+        elif event.type == pygame.MOUSEBUTTONDOWN:
+            player.click()
         
-    all.update(pygame.mouse.get_pos())
+        
+        
+    all.update()
     
             
     bgColor = r,g,b
