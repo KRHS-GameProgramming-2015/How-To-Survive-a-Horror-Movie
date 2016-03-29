@@ -37,12 +37,9 @@ while True:
             player.unclick()
         elif event.type == pygame.MOUSEBUTTONDOWN:
             player.click()
-        
-        
-        
+
     all.update()
-    
-            
+
     bgColor = r,g,b
     screen.fill(bgColor)
     dirty = all.draw(screen)
