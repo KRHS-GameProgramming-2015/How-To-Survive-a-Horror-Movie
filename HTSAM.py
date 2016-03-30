@@ -1,6 +1,7 @@
 import sys, pygame, math, random
 from Player import Player
 from Screen import Screen
+from Choice import Choice
 
 pygame.init()
 
@@ -17,10 +18,12 @@ pygame.mouse.set_visible(False)
 
 players = pygame.sprite.Group()
 screens = pygame.sprite.Group()
+choices = pygame.sprite.Group()
 all = pygame.sprite.OrderedUpdates()
 
 Player.containers = (players, all)
 Screen.containers = (screens, all)
+Choice.containers = (choices, all)
 
 screen = Screen("Room(1.5)", size)
 player = Player(pygame.mouse.get_pos())
