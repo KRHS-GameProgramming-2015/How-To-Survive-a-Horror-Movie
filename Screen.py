@@ -8,7 +8,7 @@ class Screen(pygame.sprite.Sprite):
         self.name = screenName
         
         if self.name == "Room(1.5)":
-            self.bgImage = pygame.image.load("Home Alone - Noises In Basement\Backgrounds\Room(1.5).png")
+            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/Room(1.5).png")
             choices = [Choice("some text", 0, screenSize),
                        Choice("some other text", 1, screenSize)]
         
