@@ -60,11 +60,12 @@ while True:
             screen.unload()
             screen = Screen("Basement", size)
             player = Player(pygame.mouse.get_pos())
-
             
-
-            
-    
+    if screen.name == "Basement":
+        if theChoice == 0:
+            screen.unload()
+            screen = Screen("YouFailMiserabally", size)
+            player = Player(pygame.mouse.get_pos())
 
     bgColor = r,g,b
     window.fill(bgColor)
