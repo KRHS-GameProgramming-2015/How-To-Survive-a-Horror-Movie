@@ -28,6 +28,8 @@ Choice.containers = (choices, all)
 screen = Screen("Room(1.5)", size)
 player = Player(pygame.mouse.get_pos())
 
+playersHitChoices = {}
+
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT: 
@@ -40,6 +42,29 @@ while True:
             player.click()
 
     all.update()
+    
+    playersHitChoices = {}
+    theChoice = "bob";  
+    if player.clicking:
+        playersHitChoices = pygame.sprite.groupcollide(players, choices, False, False)
+    
+      
+    for p in playersHitChoices:
+        for choice in playersHitChoices[p]:
+            if choice.isClicked(player.rect.topleft):
+                theChoice = choice.index
+                print theChoice
+    
+    if screen.name == "Room(1.5)":
+        if theChoice == 0:
+            screen.unload()
+            screen = Screen("Basement", size)
+            player = Player(pygame.mouse.get_pos())
+
+            
+
+            
+    
 
     bgColor = r,g,b
     window.fill(bgColor)

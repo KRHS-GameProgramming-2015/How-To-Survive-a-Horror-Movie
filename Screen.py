@@ -9,9 +9,22 @@ class Screen(pygame.sprite.Sprite):
         
         if self.name == "Room(1.5)":
             self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/Room(1.5).png")
-            choices = [Choice("some text", 0, screenSize),
-                       Choice("some other text", 1, screenSize)]
+            self.choices = [Choice("A. Go check te basement", 0, screenSize),
+                       Choice("B. DO ABSOLUTELY NOTHING", 1, screenSize),
+                       Choice("C. RUN OUTSIDE for whatever reason", 2, screenSize),
+                       Choice("D. Hide in closet, call Police", 3, screenSize)]
+        if self.name == "Basement":
+            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/Basement.png")
+            self.choices = [Choice("A. Go check te basement", 0, screenSize),
+                       Choice("B. DO ABSOLUTELY NOTHING", 1, screenSize),
+                       Choice("C. RUN OUTSIDE for whatever reason", 2, screenSize),
+                       Choice("D. Hide in closet, call Police", 3, screenSize)]
         
         self.bgImage = pygame.transform.scale(self.bgImage, screenSize)    
         self.image = self.bgImage
         self.rect = self.image.get_rect()
+        
+    def unload(self):
+        for choice in self.choices:
+            choice.kill()
+        self.kill()
