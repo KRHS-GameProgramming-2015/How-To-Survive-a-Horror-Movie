@@ -61,10 +61,28 @@ while True:
             screen = Screen("Basement", size)
             player = Player(pygame.mouse.get_pos())
             
-    if screen.name == "Basement":
+    elif screen.name == "Basement":
         if theChoice == 0:
             screen.unload()
             screen = Screen("YouFailMiserabally", size)
+            player = Player(pygame.mouse.get_pos())
+            
+    elif screen.name == "Room(1.5)":
+        if theChoice == 1:
+            screen.unload()
+            screen = Screen("Room(2)", size)
+            player = Player(pygame.mouse.get_pos())
+            
+    elif screen.name == "Room(1.5)":
+        if theChoice == 1:
+            screen.unload()
+            screen = Screen("Run Away!", size)
+            player = Player(pygame.mouse.get_pos())
+            
+    elif screen.name == "Room(1.5)":
+        if theChoice == 1:
+            screen.unload()
+            screen = Screen("911", size)
             player = Player(pygame.mouse.get_pos())
 
     bgColor = r,g,b
