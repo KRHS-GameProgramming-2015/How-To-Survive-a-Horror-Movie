@@ -18,8 +18,14 @@ class Screen(pygame.sprite.Sprite):
             self.choices = [Choice("A. Check te closet", 0, screenSize),
                        Choice("B. Go back upstairs. Probably just a mouse, right?", 1, screenSize),
                        Choice("C. RUN FOREST RUN!", 2, screenSize)]
-        if self.name == "YouFailMiserabally":
+        elif self.name == "YouFailMiserabally":
             self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/YouFailMiserabally.png")
+        elif self.name == "911":
+            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/911.png")
+        elif self.name == "Run Away!":
+            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/Run Away!.png")
+        elif self.name == "Room(2)":
+            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/Room(2).png")
         
         self.bgImage = pygame.transform.scale(self.bgImage, screenSize)    
         self.image = self.bgImage
