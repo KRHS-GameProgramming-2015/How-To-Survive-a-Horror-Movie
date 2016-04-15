@@ -25,6 +25,8 @@ class Screen(pygame.sprite.Sprite):
             self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/Run Away!.png")
         elif self.name == "Room(2)":
             self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/Room (2).png")
+        elif self.name == "Milk Choke":
+            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/MilkChoke.png")
 
         if self.name == "YouFailMiserabally":
             self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/YouFailMiserabally.png")
@@ -40,6 +42,10 @@ class Screen(pygame.sprite.Sprite):
 
         if self.name == "Room(2)":
             self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/Room (2).png")
+            self.choices = [Choice("Retry?", 0, screenSize)]
+        
+        if self.name == "Milk Choke":
+            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/MilkChoke.png")
             self.choices = [Choice("Retry?", 0, screenSize)]
 
         self.bgImage = pygame.transform.scale(self.bgImage, screenSize)    

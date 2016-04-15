@@ -97,10 +97,24 @@ while True:
             screen = Screen("Room(1.5)", size)
             player = Player(pygame.mouse.get_pos())
             
+    elif screen.name == "Milk Choke":
+        if theChoice == 0:
+            screen.unload()
+            screen = Screen("Room(1.5)", size)
+            player = Player(pygame.mouse.get_pos())
+            
     elif screen.name == "Basement":
         if theChoice == 0:
             screen.unload()
             screen = Screen("YouFailMiserabally", size)
+            player = Player(pygame.mouse.get_pos())
+        elif theChoice == 1:
+            screen.unload()
+            screen = Screen("Milk Choke", size)
+            player = Player(pygame.mouse.get_pos())
+        elif theChoice == 2:
+            screen.unload()
+            screen = Screen("Run Away!", size)
             player = Player(pygame.mouse.get_pos())
         
 
