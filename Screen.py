@@ -27,7 +27,11 @@ class Screen(pygame.sprite.Sprite):
             self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/Room (2).png")
         elif self.name == "Milk Choke":
             self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/MilkChoke.png")
-
+        elif self.name == "RunUp1":
+            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/RunUp1.png")
+        elif self.name == "RunUp2":
+            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/RunUp2.png")
+        
         if self.name == "YouFailMiserabally":
             self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/YouFailMiserabally.png")
             self.choices = [Choice("Retry?", 0, screenSize)]
@@ -46,6 +50,17 @@ class Screen(pygame.sprite.Sprite):
         
         if self.name == "Milk Choke":
             self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/MilkChoke.png")
+            self.choices = [Choice("Retry?", 0, screenSize)]
+            
+        if self.name == "RunUp1":
+            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/RunUp1.png")
+            self.choices = [Choice("Fists", 0, screenSize),
+                            Choice("Rubber Chicken XD", 1, screenSize),
+                            Choice("Old Shotgun", 2, screenSize),
+                            Choice("Plasma Cannon", 3, screenSize)]
+                            
+        if self.name == "RunUp2":
+            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/RunUp2.png")
             self.choices = [Choice("Retry?", 0, screenSize)]
 
         self.bgImage = pygame.transform.scale(self.bgImage, screenSize)    
