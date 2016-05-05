@@ -114,6 +114,12 @@ while True:
             screen.unload()
             screen = Screen("RunUp3", size)
             player = Player(pygame.mouse.get_pos())
+            
+    elif screen.name == "RunUp4":
+        if theChoice == 0:
+            screen.unload()
+            screen = Screen("RunUp34, size)
+            player = Player(pygame.mouse.get_pos())
     
     elif screen.name == "Basement":
         if theChoice == 0:
@@ -138,6 +144,11 @@ while True:
             if theChoice == 1:
                 screen.unload()
                 screen = Screen("RunUp3", size)
+                player = Player(pygame.mouse.get_pos())
+        elif screen.name == "RunUp1":
+            if theChoice == 2:
+                screen.unload()
+                screen = Screen("RunUp4", size)
                 player = Player(pygame.mouse.get_pos())
         
 
