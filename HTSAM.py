@@ -118,7 +118,7 @@ while True:
     elif screen.name == "RunUp4":
         if theChoice == 0:
             screen.unload()
-            screen = Screen("RunUp34, size)
+            screen = Screen("RunUp4, size)
             player = Player(pygame.mouse.get_pos())
     
     elif screen.name == "Basement":
