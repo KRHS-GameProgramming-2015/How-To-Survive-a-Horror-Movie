@@ -158,7 +158,7 @@ while True:
                 screen.unload()
                 screen = Screen("RunUp5", size)
                 player = Player(pygame.mouse.get_pos())
-        
+
 
     bgColor = r,g,b
     window.fill(bgColor)
