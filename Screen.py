@@ -38,6 +38,14 @@ class Screen(pygame.sprite.Sprite):
             self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/RunUp4.png")
         elif self.name == "RunUp5":
             self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/RunUp5.png")
+        elif self.name == "Asylum1":
+            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/Asylum 1.png")
+        elif self.name == "Outside":
+            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/The Outside.png")
+        elif self.name == "Stairs":
+            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/Stairs.png")
+        elif self.name == "Upstairs":
+            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/Upstairs.png")
         
         if self.name == "YouFailMiserabally":
             self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/YouFailMiserabally.png")
@@ -81,6 +89,19 @@ class Screen(pygame.sprite.Sprite):
         if self.name == "RunUp5":
             self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/RunUp5.png")
             self.choices = [Choice("Retry?", 0, screenSize)]
+            
+        if self.name == "Asylum 1":
+            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/Asylum 1.png")
+            self.choices = [Choice("Go Back", 0, screenSize),
+                            Choice("Next", 1, screenSize)]
+                            
+        if self.name == "Outside":
+            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/The Outside.png")
+            self.choices = [Choice("Next", 0, screenSize)]
+            
+        if self.name == "Stairs":
+            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/Stairs.png")
+            self.choices = [Choice("Next", 0, screenSize)]
 
         self.bgImage = pygame.transform.scale(self.bgImage, screenSize)    
         self.image = self.bgImage
