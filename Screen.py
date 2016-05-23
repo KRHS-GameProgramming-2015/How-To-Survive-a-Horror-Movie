@@ -18,30 +18,6 @@ class Screen(pygame.sprite.Sprite):
             self.choices = [Choice("A. Check te closet", 0, screenSize),
                        Choice("B. Go back upstairs. Probably just a mouse, right?", 1, screenSize),
                        Choice("C. RUN FOREST RUN!", 2, screenSize)]
-        elif self.name == "YouFailMiserabally":
-            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/YouFailMiserabally.png")
-        elif self.name == "911":
-            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/911.png")
-        elif self.name == "Run Away!":
-            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/Run Away!.png")
-        elif self.name == "Room(2)":
-            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/Room (2).png")
-        elif self.name == "Milk Choke":
-            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/MilkChoke.png")
-        elif self.name == "RunUp1":
-            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/RunUp1.png")
-        elif self.name == "RunUp2":
-            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/RunUp2.png")
-        elif self.name == "RunUp3":
-            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/RunUp3.png")
-        elif self.name == "RunUp4":
-            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/RunUp4.png")
-        elif self.name == "RunUp5":
-            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/RunUp5.png")
-        elif self.name == "Asylum1":
-            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/Asylum 1.png")
-        elif self.name == "Outside":
-            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/The Outside.png")
         elif self.name == "ContinueFilm":
             self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/Continue Filming.png")
         
