@@ -42,71 +42,87 @@ class Screen(pygame.sprite.Sprite):
             self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/Asylum 1.png")
         elif self.name == "Outside":
             self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/The Outside.png")
-        elif self.name == "Stairs":
-            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/Stairs.png")
-        elif self.name == "Upstairs":
-            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/Upstairs.png")
+        elif self.name == "ContinueFilm":
+            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/Continue Filming.png")
         
-        if self.name == "YouFailMiserabally":
+        elif self.name == "YouFailMiserabally":
             self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/YouFailMiserabally.png")
             self.choices = [Choice("Retry?", 0, screenSize)]
 
-        if self.name == "911":
+        elif self.name == "911":
             self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/911.png")
             self.choices = [Choice("Retry?", 0, screenSize)]
 
-        if self.name == "Run Away!":
+        elif self.name == "Run Away!":
             self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/Run Away!.png")
             self.choices = [Choice("Retry?", 0, screenSize)]
 
-        if self.name == "Room(2)":
+        elif self.name == "Room(2)":
             self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/Room (2).png")
             self.choices = [Choice("Retry?", 0, screenSize)]
         
-        if self.name == "Milk Choke":
+        elif self.name == "Milk Choke":
             self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/MilkChoke.png")
             self.choices = [Choice("Retry?", 0, screenSize)]
             
-        if self.name == "RunUp1":
+        elif self.name == "RunUp1":
             self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/RunUp1.png")
             self.choices = [Choice("Fists", 0, screenSize),
                             Choice("Rubber Chicken XD", 1, screenSize),
                             Choice("Old Shotgun", 2, screenSize),
                             Choice("Plasma Cannon", 3, screenSize)]
                             
-        if self.name == "RunUp2":
+        elif self.name == "RunUp2":
             self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/RunUp2.png")
             self.choices = [Choice("Retry?", 0, screenSize)]
         
-        if self.name == "RunUp3":
+        elif self.name == "RunUp3":
             self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/RunUp3.png")
             self.choices = [Choice("Retry?", 0, screenSize)]
         
-        if self.name == "RunUp4":
+        elif self.name == "RunUp4":
             self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/RunUp4.png")
             self.choices = [Choice("Retry?", 0, screenSize)]
             
-        if self.name == "RunUp5":
+        elif self.name == "RunUp5":
             self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/RunUp5.png")
             self.choices = [Choice("Retry?", 0, screenSize)]
             
-        if self.name == "Asylum 1":
+        elif self.name == "Asylum 1":
             self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/Asylum 1.png")
             self.choices = [Choice("Go Back", 0, screenSize),
                             Choice("Next", 1, screenSize)]
-                            
-        if self.name == "Outside":
+
+        elif self.name == "Outside":
             self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/The Outside.png")
             self.choices = [Choice("Next", 0, screenSize)]
-            
-        if self.name == "Stairs":
+
+        elif self.name == "Stairs":
             self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/Stairs.png")
             self.choices = [Choice("Next", 0, screenSize)]
+
+        elif self.name == "Upstairs":
+            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/Upstairs.png")
+            self.choices = [Choice("2B", 0, screenSize),
+                            Choice("2E", 1, screenSize),
+                            Choice("2H", 2, screenSize)] 
+
+        elif self.name == "2B":
+            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/2B.png")
+            self.choices = [Choice("Next", 0, screenSize)]
+
+        elif self.name == "2E":
+            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/2H.png")
+            self.choices = [Choice("Back", 0, screenSize)]
+
+        elif self.name == "2H":
+            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/2H.png")
+            self.choices = [Choice("Back", 0, screenSize)]
 
         self.bgImage = pygame.transform.scale(self.bgImage, screenSize)    
         self.image = self.bgImage
         self.rect = self.image.get_rect()
-        
+
     def unload(self):
         for choice in self.choices:
             choice.kill()

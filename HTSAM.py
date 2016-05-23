@@ -178,6 +178,38 @@ while True:
             screen.unload()
             screen = Screen("Upstairs", size)
             player = Player(pygame.mouse.get_pos())
+            
+    elif screen.name == "Upstairs":
+        if theChoice == 0:
+            screen.unload()
+            screen = Screen("2B", size)
+            player = Player(pygame.mouse.get_pos())
+        elif theChoice == 1:
+            screen.unload()
+            screen = Screen("2E", size)
+            player = Player(pygame.mouse.get_pos())
+        elif theChoice == 2:
+            screen.unload()
+            screen = Screen("2H", size)
+            player = Player(pygame.mouse.get_pos())
+            
+    elif screen.name == "2B":
+        if theChoice == 0:
+            screen.unload()
+            screen = Screen("ContinueFilm", size)
+            player = Player(pygame.mouse.get_pos())
+            
+    elif screen.name == "2E":
+        if theChoice == 0:
+            screen.unload()
+            screen = Screen("Upstairs", size)
+            player = Player(pygame.mouse.get_pos())
+            
+    elif screen.name == "2H":
+        if theChoice == 0:
+            screen.unload()
+            screen = Screen("Upstairs", size)
+            player = Player(pygame.mouse.get_pos())
 
     bgColor = r,g,b
     window.fill(bgColor)
