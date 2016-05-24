@@ -96,6 +96,23 @@ class Screen(pygame.sprite.Sprite):
         elif self.name == "ContinueFilm":
             self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/Continue Filming.png")
             self.choices = [Choice("Next", 0, screenSize)]
+            
+        elif self.name == "Check":
+            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/Check It Out.png")
+            self.choices = [Choice("Sprint for the front exit!", 0, screenSize),
+                            Choice("Escape to the cellar and find an exit there.", 1, screenSize)]
+
+        elif self.name == "SPRINT FOR THE EXIT!":
+            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/SPRINT FOR THE EXIT!.png")
+            self.choices = [Choice("Retry?", 0, screenSize)]
+            
+        elif self.name == "cellar":
+            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/cellar.png")
+            self.choices = [Choice("Next", 0, screenSize)]
+            
+        elif self.name == "News":
+            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/News Report.png")
+            self.choices = [Choice("Retry?", 0, screenSize)]
 
         self.bgImage = pygame.transform.scale(self.bgImage, screenSize)    
         self.image = self.bgImage
