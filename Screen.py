@@ -86,7 +86,7 @@ class Screen(pygame.sprite.Sprite):
             self.choices = [Choice("Next", 0, screenSize)]
 
         elif self.name == "2E":
-            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/2H.png")
+            self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/2E.png")
             self.choices = [Choice("Back", 0, screenSize)]
 
         elif self.name == "2H":
