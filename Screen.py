@@ -95,7 +95,7 @@ class Screen(pygame.sprite.Sprite):
             
         elif self.name == "ContinueFilm":
             self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/Continue Filming.png")
-            self.choices = [Choice("Next", 0, screenSize)]
+            self.choices = [Choice("Check It Out", 0, screenSize)]
             
         elif self.name == "Check":
             self.bgImage = pygame.image.load("Home Alone - Noises In Basement/Backgrounds/Check It Out.png")
