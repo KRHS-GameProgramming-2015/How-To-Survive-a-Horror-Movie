@@ -2,7 +2,7 @@ import sys, pygame, math, random
 from Player import Player
 from Screen import Screen
 from Choice import Choice
-
+ 
 pygame.init()
 
 clock = pygame.time.Clock()
